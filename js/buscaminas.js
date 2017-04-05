@@ -3,6 +3,8 @@ var bomba =document.getElementsByClassName("bomba");
 var btnNumeros = document.getElementsByClassName("btnNumeros");
 var btnNumeros1 = document.getElementsByClassName("btnNumeros1");
 var btnColor = document.getElementsByClassName('nombreColor');
+var btnReiniciar = document.getElementById('btnReiniciar');
+btnReiniciar.addEventListener('click',reiniciar);
 var longitud = btnExplotar.length;
 
 
@@ -94,12 +96,13 @@ function mostrarBomba(){
 		alert("Esto ha Explotado :(");
 	},200);
 
-	setTimeout(function(){
-		var respuesta = confirm("Deseas volver a jugar");
-	},300);
+	// var respuesta;
+	// setTimeout(function(){
+	// 	 respuesta = confirm("Deseas volver a jugar");
+	// },300);
 	
-	// if (respuesta){
-	// 	alert("ok");
-	// }
 }
 
+function reiniciar(){
+	window.location.reload();
+}
